@@ -14,6 +14,11 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use('/api/user',userRoutes)
 app.use('/api/job',jobRoutes)
+
 app.listen(port,()=>{
     console.log(`server running in port ${port}`)
+})
+
+app.use('/',(req,res)=>{
+    res.send('<h1>Welcome to BiteBuddy')
 })
